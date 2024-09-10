@@ -1,2 +1,2 @@
 # VT-ITMO-Labs
-Archive with all my programming labs
+Архив моих лабораторных работ с первого курса ИМТО ПИ (СППО).

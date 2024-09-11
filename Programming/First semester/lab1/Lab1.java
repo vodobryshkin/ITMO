@@ -1,5 +1,6 @@
 // Вариант 29774
-public class Lab1 {   // Статичный метод для вычисления элемента матрицы
+public class Lab1 {   
+   // Статичный метод для вычисления элемента матрицы
    public static float calculateElement(short r, float x) {
       switch (r) {
          case 11: 

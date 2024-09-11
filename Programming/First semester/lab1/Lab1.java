@@ -19,7 +19,7 @@ public class Lab1 {   // Статичный метод для вычислени
          for (var j = 0; j < m[i].length; j++) {
             System.out.printf("%.03f\t", m[i][j]);
          }
-         System.out.printf("\n");
+         System.out.printf("\r");
       }
    }
 

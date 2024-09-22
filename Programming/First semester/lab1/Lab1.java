@@ -1,5 +1,5 @@
 // Вариант 29774
-public class Lab1 {   
+public class Lab1 {
    // Статичный метод для вычисления элемента матрицы
    public static float calculateElement(short r, float x) {
       switch (r) {
@@ -20,17 +20,17 @@ public class Lab1 {
          for (var j = 0; j < m[i].length; j++) {
             System.out.printf("%.03f\t", m[i][j]);
          }
-         System.out.printf("\r");
+         System.out.printf("\n");
       }
    }
 
    public static void main(String[]  args) {
-      // Создание одномерного массива r типа short 
-      short[] r = new short[17];
+      // Создание одномерного массива z типа short 
+      short[] z = new short[17];
       
       // Заполнение массива r числами от 4 до 20
       for (short i = 4; i <= 20; i++) {
-         r[i - 4] = i;
+         z[i - 4] = i;
       }
 
       // Создание одномерного массива x типа float
@@ -41,18 +41,18 @@ public class Lab1 {
          x[i] = (float)((Math.random() * 24.0 - 11.0));
       }
       
-      // Создание двумерного массива m
-      float[][] m = new float[17][15];
+      // Создание двумерного массива w
+      float[][] w = new float[17][15];
 
-      // Вычисление элементов массива m
+      // Вычисление элементов массива w
       for (var i = 0; i < 17; i++) {
          for (var j = 0; j < 15; j++) {
             // Вычисление элемента матрицы с помощью статичного метода calculateElement
-            m[i][j] = calculateElement(r[i], x[j]);
+            w[i][j] = calculateElement(z[i], x[j]);
          }
       }
 
       // Вывод матрицы с помощью статичного метода printMatrix
-      printMatrix(m);
+      printMatrix(w);
    }
 }

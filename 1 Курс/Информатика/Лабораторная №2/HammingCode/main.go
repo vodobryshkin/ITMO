@@ -24,13 +24,13 @@ func main() {
    // Получение информации об ошибки на индексе err
    errorPlace := GetInfoAboutError(s[:len(s) - 2], err)
 
-   fmt.Printf("Анализ на основе классического кода Хэмминга:\n")
+   fmt.Printf("\nАнализ на основе классического кода Хэмминга:\n")
    if err == -1 {
       fmt.Printf("Ошибок в сообщении не обнаружено.\n")
    } else if DeleteAllStars(infoBits, -1) == correctBits {
-      fmt.Printf("Допущена ошибка в %d бите%s. Так как это бит чётности, то последовательность информационных битов корректна изначально и равна %s.", err + 1, errorPlace, correctBits)
+      fmt.Printf("Допущена ошибка в %d бите%s.\nТак как это бит чётности, то последовательность информационных битов корректна изначально и равна %s.\n", err + 1, errorPlace, correctBits)
    } else {
-      fmt.Printf("Допущена ошибка в %d бите%s. Корректная последовательность информационных битов равна %s.", err + 1, errorPlace, correctBits)
+      fmt.Printf("Допущена ошибка в %d бите%s.\nКорректная последовательность информационных битов равна %s.\n", err + 1, errorPlace, correctBits)
    }
    
 }

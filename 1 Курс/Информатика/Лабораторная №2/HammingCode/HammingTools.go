@@ -69,21 +69,23 @@ func CatchErrorIndex(result string) int {
 func GetInfoAboutError(s string, err int) string {
    var ss2 float64
    infoCounter := 1
+   chtCounter := 1
 
    for i := 0; i < len(s); i++ {
       // Если iтый бит - бит четности
       if float64(i + 1) == math.Pow(2, ss2) {
          if i == err {
-            return fmt.Sprintf("(%d бит четности; ошибочное значение %c)", int(math.Pow(2, ss2)), s[i])
+            return fmt.Sprintf("(%d бит четности; ошибочное значение %c)", chtCounter, s[i])
          }
-
+         
+         chtCounter++
          ss2 += 1
       } else { // Если iтый бит - информционный бит
          if i == err {
             return fmt.Sprintf("(%d информационный бит; ошибочное значение %c)", infoCounter, s[i])
          }
 
-         infoCounter += 1
+         infoCounter++
       }
    }
 

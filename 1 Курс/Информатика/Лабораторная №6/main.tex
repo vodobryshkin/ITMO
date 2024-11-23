@@ -1,0 +1,26 @@
+\documentclass[a4paper]{article}
+\usepackage[english, russian]{babel} % русский алфавит
+\usepackage{graphicx} % работа с графикой
+\usepackage{multicol} % две колонки
+\usepackage[top=1.5cm]{geometry} % отступ для текста
+\usepackage{tabularx} % структура таблицы
+\usepackage{fancyhdr} % красивый дизайн 
+\usepackage{caption} % корректное название таблицы
+\usepackage{float} % корректное расположение таблицы 
+\usepackage{amsmath} % математические формулы
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+
+\fancypagestyle{titlepage}{
+    \fancyfoot[C]{Санкт-Петербург, 2024}% Нижний колонтитул по центру
+}
+
+\begin{document}
+
+\input{title.tex}
+\input{task1.tex}
+
+\end{document}
